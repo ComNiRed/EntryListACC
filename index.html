@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Series Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+</head>
+<body id="body" class="darkMode">
+    <div>
+        <div class="functionBar">
+            <select id="series-select" name="series-select">
+                <option value="">--Series--</option>
+            </select>
+            <select id="year-select" name="year-select">
+                <option value="">--Year--</option>
+            </select>
+            <select id="race-select" name="race-select">
+                <option value="">--Race--</option>
+            </select>
+        </div>
+        <div class="sortFilterBar">
+            <div class="sortLine">
+                <select id="sort-select" name="sort-select">
+                    <option value="carModelType" selected>Car Model Type</option>
+                    <option value="teamName">Team Name</option>
+                    <option value="raceNumber">Race Number</option>
+                </select>
+                <button id="isSortDESC" value=false><img alt="asc.jpg" src="img/asc.jpg"></button>
+            </div>
+            <div class="functionBar">
+                <input type="search" id="teamNameSearch" class="searchBar" placeholder="Search by Team Name..." />
+                <input type="search" id="raceNumberSearch" class="searchBar" placeholder="Search by Car Number..." />
+                <input type="search" id="carModelTypeSearch" class="searchBar" placeholder="Search by Car Model Type..." />
+            </div>
+            <button id="generateAIButton" disabled>Generate IA</button>
+        </div>
+        <div id="cars"></div>
+    </div>
+    <div class="cart">
+        <div class="cartSummary">
+            <div>Selected: <span id="selectedCars">0</span> (<span id="selectedCarsIA">0</span> IA)</div>
+            <div>Your Car:</div>
+            <div id="selectedCarImg" class="carImgPortrait">No car selected yet</div>
+        </div>
+        <div id="cartList">
+            <div id="noCarSelected" class="noBorder carImgPortrait">No car selected yet</div>
+        </div>
+        <div class="generateButton">
+            <button id="generateButton" disabled>Generate Json</button>
+            <button id="clearIA">Clear IA</button>
+        </div>
+    </div>
+    <div id="randomAIModal" style="display: none;">
+        <div>
+            <span id="closeGenerateWindow">x</span>
+            <span class="numberIAModal"><label for="numberIA">Nombre d'IA : </label><input type="number" id="numberIA" min="1"/></span>
+            <span class="generationLimitText">Must be between 1 and&nbsp;<span id="maxGenLimit">xx</span></span>
+            <span>
+                <label for="addAIM">Add</label><input type="radio" id="addAIM" name="addAIMethod" value="addAIM" checked/>
+                <label for="replaceAIM">Replace</label><input type="radio" id="replaceAIM" name="addAIMethod" value="replaceAIM"/>
+            </span>
+            <button id="addGeneratedAIButton" disabled>Generate IA</button>
+        </div>
+    </div>
+</body>
+</html>

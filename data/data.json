@@ -1,0 +1,350 @@
+{
+  "series": {
+    "GT World Challenge Europe": {
+      "2018": [
+        {
+          "name": "Zolder (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Monza (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Brands Hatch (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Silverstone (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2018_spa"
+        },
+        {
+          "name": "Hungaroring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Nurburgring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        }
+      ],
+      "2019": [
+        {
+          "name": "Monza (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Brands Hatch (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Silverstone (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Zandvoort (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2019_spa"
+        },
+        {
+          "name": "Nurburgring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Hungaroring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        }
+      ],
+      "2020": [
+        {
+          "name": "Imola (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Nurburgring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Magny-Cours (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Zandvoort (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2020_spa"
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        }
+      ],
+      "2021": [
+        {
+          "name": "Monza (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Magny-Cours (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Zandvoort (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2021_spa"
+        },
+        {
+          "name": "Brands Hatch (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Nurburgring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Valencia (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        }
+      ],
+      "2022": [
+        {
+          "name": "Imola (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Brands Hatch (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Magny-Cours (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Zandvoort (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2022_spa"
+        },
+        {
+          "name": "Hockenheim (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Valencia (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        }
+      ],
+      "2023": [
+        {
+          "name": "Monza (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Brands Hatch (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Paul Ricard (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Spa-Francorchamps (Endurance)",
+          "filename": "2023_spa"
+        },
+        {
+          "name": "Misano (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Nurburgring (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Valencia (Sprint)",
+          "filename": ""
+        },
+        {
+          "name": "Barcelona (Endurance)",
+          "filename": ""
+        },
+        {
+          "name": "Zandvoort (Sprint)",
+          "filename": ""
+        }
+      ]
+    },
+    "GT World Challenge America": {
+      "2022": [
+      ],
+      "2023": [
+      ]
+    },
+    "Intercontinental GT Challenge": {
+      "2019": [
+      ]
+    },
+    "GT4 European Series": {
+      "2019": [
+      ]
+    },
+    "British GT Chapionship": {
+      "2019": [
+      ]
+    },
+    "GT2 European Series": {
+      "2023": [
+      ]
+    },
+    "Other": {
+      "": [
+        {
+          "name": "Porsche Carrera Cup Germany 2022",
+          "filename": ""
+        },
+        {
+          "name": "Porsche Carrera Cup Great Britain 2023",
+          "filename": ""
+        },
+        {
+          "name": "Nurburgring 24h",
+          "filename": ""
+        },
+        {
+          "name": "BMW M2 CS Racing Cup (Fictional)",
+          "filename": ""
+        }
+      ]
+    }
+  },
+  "cupCategory": {
+    "0": "PRO",
+    "1": "PRO-AM",
+    "2": "AM",
+    "3": "SILVER",
+    "4": "NATIONAL"
+  },
+  "carModelType": {
+    "0":"Porsche 911 GT3 R (991)",
+    "1":"Mercedes-AMG GT3",
+    "2":"Ferrari 488 GT3",
+    "3":"Audi R8 LMS",
+    "4":"Lamborghini Huracan GT3",
+    "5":"McLaren 650S GT3",
+    "6":"Nissan GT-R Nismo GT3",
+    "7":"BMW M6 GT3",
+    "8":"Bentley Continental GT3",
+    "9":"Porsche 911 GT3 Cup (991 II)",
+    "10":"Nissan GT-R Nismo GT3",
+    "11":"Bentley Continental GT3",
+    "12":"Aston Martin V12 Vantage GT3",
+    "13":"Lamborghini Gallardo R-EX GT3",
+    "14":"Emil Frey Jaguar G3",
+    "15":"Lexus RC F GT3",
+    "16":"Lamborghini Huracan GT3 Evo",
+    "17":"Honda NSX GT3",
+    "18":"Lamborghini Huracan ST",
+    "19":"Audi R8 LMS evo",
+    "20":"Aston Martin V8 Vantage GT3",
+    "21":"Honda NSX GT3 Evo",
+    "22":"McLaren 720S GT3",
+    "23":"Porsche 911 GT3 R (991 II)",
+    "24":"Ferrari 488 GT3 Evo",
+    "25":"Mercedes-AMG GT3 2020",
+    "26":"Ferrari 488 Challenge Evo",
+    "27":"BMW M2 CS Racing",
+    "28":"Porsche 911 GT3 Cup (992)",
+    "29":"Lamborghini Huracan ST EVO2",
+    "30":"BMW M4 GT3",
+    "31":"Audi R8 LMS evo II",
+    "32":"Ferrari 296 GT3",
+    "33":"Lamborghini Huracan GT3 EVO2",
+    "34":"Porsche 911 GT3 R (992)",
+    "35":"McLaren 720S GT3 Evo",
+    "50":"Alpine A110 GT4",
+    "51":"Aston Martin V8 Vantage GT4",
+    "52":"Audi R8 LMS GT4",
+    "53":"BMW M4 GT4",
+    "55":"Chevrolet Camaro GT4",
+    "56":"Ginetta G55 GT4",
+    "57":"KTM X-BOW GT4",
+    "58":"Maserati Granturismo MC GT4",
+    "59":"McLaren 570S GT4",
+    "60":"Mercedes-AMG GT4",
+    "61":"Porsche 718 Cayman GT4 Clubsport",
+    "80":"Audi R8 LMS GT2",
+    "82":"KTM X-BOX GT2",
+    "83":"Maserati GT2",
+    "84":"Mercedes-AMG GT2",
+    "85":"Porsche 911 GT2 RS CS Evo (991 II)",
+    "86":"Porsche 935"
+  }
+}

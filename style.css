@@ -1,0 +1,522 @@
+
+@font-face {
+    font-family: univia-pro;
+    font-style: normal;
+    src: url('./misc/univia-pro/UniviaPro-Bold.otf');
+}
+@font-face {
+    font-family: uniwars;
+    src: url('./misc/uniwars/uniwars.ttf');
+}
+
+body {
+    background-color: ghostwhite;
+    font-family: univia-pro, sans-serif;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+body > div {
+    width: 80%;
+}
+
+.hr {
+    height: 0 !important;
+    width: 100%;
+    border-top: black solid 1px;
+}
+
+.vr {
+    width: 0 !important;
+    height: 100%;
+    border-left: grey solid 1px;
+}
+
+.functionBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+    margin: 0 5%;
+}
+
+.functionBar * {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.flag {
+    height: 25px;
+    max-height: 25px;
+    max-width: 39px;
+}
+
+select {
+    width: 150px;
+}
+
+label {
+    padding: 0 5px;
+}
+
+.hide { display: none; }
+
+.searchBar {
+    border-radius: 10px;
+    height: 25px;
+    width: 200px;
+}
+
+#cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#cars > div {
+    color: black;
+    background-color: #E1E1E1;
+    max-width: 300px;
+    height: 281px;
+    border: black solid 1px;
+    margin: 5px;
+    position: relative;
+}
+
+#cars > div > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#cars .selectionHover {
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: end;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#cars .carInfo {
+    display: flex;
+}
+
+#cars .carInfoLeft {
+    background-color: black;
+    color: white;
+    width: 75px;
+    min-width: 75px;
+    max-width: 75px;
+    height: 75px;
+    min-height: 75px;
+    max-height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cars .carInfoLeft > div {
+    display: flex;
+    align-items: center;
+}
+
+#cars .carInfoRight {
+    width: 100%;
+}
+
+#cars .raceNumber {
+    font-family: uniwars, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    height: 50px;
+}
+
+#cars .cupCategory {
+    font-size: 14px;
+    height: 25px;
+}
+
+#cars .teamName {
+    font-size: 15px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+#cars .carModel {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 25px;
+    min-height: 25px;
+    max-height: 25px;
+}
+
+#cars .carModelType {
+    padding: 0 5px;
+    font-size: 10px;
+    color: gray;
+}
+
+#cars .carImg, .cart .carImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.mainCarImage {
+    width: 300px;
+    height: 168.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.chooseButton {
+    height: 35.5px;
+    display: flex;
+}
+
+.chooseButton > button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border-width: 0;
+    font-size: 15px;
+}
+.chooseButton > button:hover { background-color: gray }
+.chooseButton > button:active { background-color: white }
+
+.hide {
+    display: flex !important;
+}
+
+/* Dark Mode */
+
+body.darkMode {
+    background-color: #3C3F41;
+    color: #aba598;
+}
+
+body.darkMode .green {
+    color: lawngreen;
+}
+
+body.darkMode tbody {
+    color: #1c1b1b;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.cart {
+    color: black;
+    background-color: white;
+    position: fixed;
+    width: 160px;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    height: calc(100% - 30px);
+}
+
+.cartSummary {
+    padding: 15px;
+    box-shadow: 0 4px 4px -4px gray;
+}
+
+.cartSummary > * {
+    padding: 5px 0;
+}
+
+.cart .carImgPortrait {
+    width: 123px;
+    height: 69.1px;
+    border: black solid 1px;
+    padding: 0;
+    color: grey;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartList {
+    color: grey;
+    font-size: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    padding: 15px 5px 0 15px;
+    height: calc(100% - 237px);
+}
+
+#cartList > div {
+    margin-bottom: 10px;
+}
+
+.noBorder {
+    border: none !important;
+}
+
+.myCar {
+    display: flex;
+    align-items: center;
+}
+
+.myCar > input {
+    margin: 0 5px;
+}
+
+.inlineButton {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    max-width: 125px;
+}
+
+.deleteButton {
+    height: 16px;
+    padding: 2px;
+    border: none;
+    background-color: unset;
+    border-radius: 5px;
+}
+
+.deleteButton:hover, .deleteButtonHover:hover {
+    background-color: lightgray;
+}
+
+.deleteButton:active, .deleteButtonHover:active {
+    background-color: darkgray;
+}
+
+.deleteButton > img {
+    width: 10px;
+    height: 12px;
+}
+
+.deleteButtonHover {
+    width: 24px;
+    height: 27px;
+    padding: 2px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.deleteButtonHover > img {
+    width: 20px;
+    height: 22px;
+}
+
+.generateButton {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    height: 70px;
+    box-shadow: 0 -4px 4px -4px gray;
+}
+
+.generateButton > button {
+    border-radius: 10px;
+    font-size: 12px;
+    width: 100px;
+    height: 20px;
+    margin: 5px;
+}
+
+.sortFilterBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#generateAIButton {
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+}
+
+#randomAIModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#randomAIModal > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: fit-content;
+    padding: 20px;
+    border: black solid 1px;
+    border-radius: 10px;
+    color: black;
+    background-color: #E1E1E1;
+}
+
+#randomAIModal > div > span {
+    display: flex;
+    align-items: center;
+}
+
+#randomAIModal > div > * {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.numberIAModal > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numberIAModal > input[type=number] {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#randomAIModal input[type=radio] {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+#randomAIModal button {
+    border-radius: 15px;
+    padding: 7px 13px;
+}
+
+.sortLine {
+    display: flex;
+}
+
+.sortLine > * {
+    height: 20px;
+}
+
+.sortLine img {
+    width: 16px;
+    height: 16px;
+}
+
+.sortLine > button {
+    padding: 0;
+}
+
+.generationLimitText {
+    font-size: 10px !important;
+    margin-top: 0 !important;
+}
+
+#closeGenerateWindow {
+    padding: 5px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

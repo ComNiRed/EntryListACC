@@ -1,0 +1,19 @@
+{
+  "name": "entry_list_acc",
+  "version": "1.0.0",
+  "description": "Entry List ACC",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Nicolas Marcello",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "electron": "^23.3.13",
+    "tslib": "^2.6.3"
+  },
+  "dependencies": {
+    "latest": "^0.2.0"
+  }
+}
