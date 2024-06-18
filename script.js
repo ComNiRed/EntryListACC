@@ -242,22 +242,22 @@ function displayCars(data) {
 }
 
 function onSeriesChange() {
-    document.getElementById("cars").innerHTML = '';
     clearIA();
+    document.getElementById("cars").innerHTML = '';
     seriesSelected = document.getElementById("series-select").value;
     displayYears();
 }
 
 function onYearChange() {
-    document.getElementById("cars").innerHTML = '';
     clearIA();
+    document.getElementById("cars").innerHTML = '';
     yearSelected = document.getElementById("year-select").value;
     displayRace();
 }
 
 async function onRaceChange() {
-    document.getElementById("cars").innerHTML = '';
     clearIA();
+    document.getElementById("cars").innerHTML = '';
     raceSelected = document.getElementById("race-select").value;
     CARS_DATA = await loadData(raceSelected);
     search();
