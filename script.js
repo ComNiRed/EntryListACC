@@ -212,7 +212,7 @@ function displayCars(data) {
                 <div class="hr"></div>
                 <div class="chooseButton"></div>
             </div>
-            <div class="selectionHover"></div>`.trim();
+            <div class="selectionHover`+ (cartList.findIndex(carTF => car.info.carGuid === carTF.info.carGuid) < 0 ? `` : ` hide`) +`"></div>`.trim();
         table.insertAdjacentElement("beforeend", html);
 
         let deleteButtonHover = document.createElement('button');
