@@ -9,7 +9,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     autoHideMenuBar: true,
   });
-  //mainWindow.setIcon("icon.png");
+  mainWindow.setIcon("icon.png");
   mainWindow.maximize();
 
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
