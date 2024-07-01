@@ -104,7 +104,7 @@ function deleteCar(car) {
 
 function updateGenerateJson() {
     document.getElementById("generateButton").disabled = !(cartList.length >= 10 && myCar !== null);
-    document.getElementById("generateAIButton").disabled = !(cartList.length < 50);
+    document.getElementById("generateAIButton").disabled = !(cartList.length < getMaxLimit());
 }
 
 function updateEndLimit() {
@@ -297,29 +297,38 @@ let isAddGeneratedAI = true;
 
 function selectAddAIM() {
     isAddGeneratedAI = true;
-    document.getElementById('numberIA').max = 50-cartList.length;
-    document.getElementById('maxGenLimit').innerText = (50-cartList.length).toString();
+    let maxLimit = getMaxLimit();
+    document.getElementById('numberIA').max = maxLimit-cartList.length;
+    document.getElementById('maxGenLimit').innerText = (maxLimit-cartList.length).toString();
     numberIAOnChange();
 }
 
 function selectReplaceAIM() {
     isAddGeneratedAI = false;
-    document.getElementById('numberIA').max = myCar === null ? 50 : 49;
-    document.getElementById('maxGenLimit').innerText = (myCar === null ? 50 : 49).toString();
+    let maxLimit = getMaxLimit();
+    document.getElementById('numberIA').max = myCar === null ? maxLimit : maxLimit-1;
+    document.getElementById('maxGenLimit').innerText = (myCar === null ? maxLimit : maxLimit-1).toString();
     numberIAOnChange();
+}
+
+function getMaxLimit() {
+    return (CARS_DATA.cars.length > 50) ? 50 : CARS_DATA.cars.length;
 }
 
 function generateAI() {
     let numberIA = parseInt(document.getElementById('numberIA').value);
     let shuffledList = [...CARS_DATA.cars].sort(() => Math.random() - 0.5);
-    shuffledList = shuffledList.slice(0, (!isNaN(numberIA)) ? numberIA : parseInt(document.getElementById('numberIA').max));
     if(isAddGeneratedAI) {
         shuffledList.filter(car => {
             return cartList.findIndex(carTF => car.info.raceNumber === carTF.info.raceNumber) < 0;
         });
     } else {
-        cartList.forEach(car => deleteCar(car));
+        cartList.forEach(car => {
+            if(car.info.raceNumber !== myCar.info.raceNumber) deleteCar(car)
+        });
+        shuffledList.remove(shuffledList.findIndex(car => car.info.raceNumber === myCar.info.raceNumber));
     }
+    shuffledList = shuffledList.slice(0, (!isNaN(numberIA)) ? numberIA : parseInt(document.getElementById('numberIA').max));
     shuffledList.forEach(car => addCar(car));
     document.getElementById("randomAIModal").style.display = "none";
 }
@@ -341,12 +350,9 @@ function clearIA() {
     cartList.forEach(car => deleteCar(car));
 }
 
-
-
-
-
-
-
-
-
-
+// Array Remove - By John Resig (MIT Licensed)
+Array.prototype.remove = function(from, to) {
+    var rest = this.slice((to || from) + 1 || this.length);
+    this.length = from < 0 ? this.length + from : from;
+    return this.push.apply(this, rest);
+};
