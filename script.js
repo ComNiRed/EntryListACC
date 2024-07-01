@@ -36,7 +36,7 @@ async function init() {
 
 function addCar(car) {
     //Car
-    document.getElementById(car.info.carGuid).getElementsByClassName("selectionHover")[0].setAttribute("class", "selectionHover hide");
+    document.getElementById(car.info.raceNumber).getElementsByClassName("selectionHover")[0].setAttribute("class", "selectionHover hide");
 
     //List
     if(cartList.length === 0) document.getElementById("noCarSelected").remove();
@@ -44,7 +44,7 @@ function addCar(car) {
     updateCartListCarNumber();
 
     let html = document.createElement('div');
-    html.setAttribute("id", car.info.carGuid + "CL");
+    html.setAttribute("id", car.info.raceNumber + "CL");
     html.innerHTML = `
                 <div class="carImgPortrait"><img src="./img/${raceSelected}/${car.info.raceNumber}.jpg" alt="${car.info.raceNumber}.jpg" class="carImg"/></div>
                 <div class="inlineButton">
@@ -71,7 +71,7 @@ function updateCartListCarNumber() {
 function addOwnCar(car) {
     setCartListMyCar(car);
     addCar(car);
-    document.getElementById(car.info.carGuid + "CL").getElementsByTagName("input")[0].click();
+    document.getElementById(car.info.raceNumber + "CL").getElementsByTagName("input")[0].click();
 }
 
 function setCartListMyCar(car) {
@@ -83,16 +83,16 @@ function setCartListMyCar(car) {
 
 function deleteCar(car) {
     //Car
-    document.getElementById(car.info.carGuid).getElementsByClassName("selectionHover")[0].setAttribute("class", "selectionHover");
-    cartList = cartList.filter((carL) => car.info.carGuid !== carL.info.carGuid);
-    if(myCar !== null && car.info.carGuid === myCar.info.carGuid) {
+    document.getElementById(car.info.raceNumber).getElementsByClassName("selectionHover")[0].setAttribute("class", "selectionHover");
+    cartList = cartList.filter((carL) => car.info.raceNumber !== carL.info.raceNumber);
+    if(myCar !== null && car.info.raceNumber === myCar.info.raceNumber) {
         myCar = null;
         document.getElementById("selectedCarImg").innerText = `No car selected yet`;
     }
 
     //List
     updateCartListCarNumber();
-    document.getElementById(car.info.carGuid + "CL").remove();
+    document.getElementById(car.info.raceNumber + "CL").remove();
 
     if(cartList.length === 0) {
         document.getElementById("cartList").insertAdjacentHTML("beforeend", `<div id="noCarSelected" class="noBorder carImgPortrait">No car selected yet</div>`);
@@ -189,7 +189,7 @@ function displayCars(data) {
     table.innerHTML = '';
     data.forEach((car) => {
         let html = document.createElement('div');
-        html.id = car.info.carGuid;
+        html.id = car.info.raceNumber;
         html.innerHTML =
             `<div>
                 <div class="carInfo">
@@ -212,7 +212,7 @@ function displayCars(data) {
                 <div class="hr"></div>
                 <div class="chooseButton"></div>
             </div>
-            <div class="selectionHover`+ (cartList.findIndex(carTF => car.info.carGuid === carTF.info.carGuid) < 0 ? `` : ` hide`) +`"></div>`.trim();
+            <div class="selectionHover`+ (cartList.findIndex(carTF => car.info.raceNumber === carTF.info.raceNumber) < 0 ? `` : ` hide`) +`"></div>`.trim();
         table.insertAdjacentElement("beforeend", html);
 
         let deleteButtonHover = document.createElement('button');
@@ -270,7 +270,7 @@ async function loadData(fileName) {
 
 function generateJson() {
     let exportCarList = [...cartList];
-    exportCarList = exportCarList.filter((carL) => myCar.info.carGuid !== carL.info.carGuid);
+    exportCarList = exportCarList.filter((carL) => myCar.info.raceNumber !== carL.info.raceNumber);
     let exportMyCar = JSON.parse(JSON.stringify(myCar));
     exportMyCar.drivers.forEach(i => i.info.playerID = "1");
     let json = {cars:[exportMyCar, ...exportCarList]};
@@ -315,8 +315,8 @@ function generateAI() {
     shuffledList = shuffledList.slice(0, (!isNaN(numberIA)) ? numberIA : parseInt(document.getElementById('numberIA').max));
     if(isAddGeneratedAI) {
         shuffledList.filter(car => {
-            return cartList.findIndex(carTF => car.info.carGuid === carTF.info.carGuid) < 0;
-        })
+            return cartList.findIndex(carTF => car.info.raceNumber === carTF.info.raceNumber) < 0;
+        });
     } else {
         cartList.forEach(car => deleteCar(car));
     }
