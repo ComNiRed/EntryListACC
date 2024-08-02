@@ -319,7 +319,7 @@ function generateAI() {
     let numberIA = parseInt(document.getElementById('numberIA').value);
     let shuffledList = [...CARS_DATA.cars].sort(() => Math.random() - 0.5);
     if(isAddGeneratedAI) {
-        shuffledList.filter(car => {
+        shuffledList = shuffledList.filter(car => {
             return cartList.findIndex(carTF => car.info.raceNumber === carTF.info.raceNumber) < 0;
         });
     } else {
